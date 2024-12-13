@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Cars</title>
+		<title>Location</title>
 		<meta charset="utf-8">
 		<meta name = "format-detection" content = "telephone=no" />
 		<link rel="icon" href="images/favicon.ico">
-		<link rel="shortcut icon" href="images/favicon.ico" />
-		<link rel="stylesheet" href="css/touchTouch.css">
-		<link rel="stylesheet" href="css/style.css">
-		<script src="js/jquery.js"></script>
-		<script src="js/jquery-migrate-1.2.1.js"></script>
-		<script src="js/script.js"></script>
-		<script src="js/superfish.js"></script>
-		<script src="js/jquery.ui.totop.js"></script>
-		<script src="js/jquery.equalheights.js"></script>
-		<script src="js/jquery.mobilemenu.js"></script>
-		<script src="js/jquery.easing.1.3.js"></script>
-		<script src="js/touchTouch.jquery.js"></script>
+		<link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" />
+		<link rel="stylesheet" href="{{ asset('css/touchTouch.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+		<script src="{{ asset('js/jquery.js') }}"></script>
+		<script src="{{ asset('js/jquery-migrate-1.2.1.js') }}"></script>
+		<script src="{{ asset('js/script.js') }}"></script>
+		<script src="{{ asset('js/superfish.js') }}"></script>
+		<script src="{{ asset('js/jquery.ui.totop.js') }}"></script>
+		<script src="{{ asset('js/jquery.equalheights.js') }}"></script>
+		<script src="{{ asset('js/jquery.mobilemenu.js') }}"></script>
+		<script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+		<script src="{{ asset('js/touchTouch.jquery.js') }}"></script>
 		<script>
 			$(document).ready(function(){
 				$().UItoTop({ easingType: 'easeOutQuart' });
@@ -57,9 +57,7 @@
 				<div class="container_12">
 					<div class="grid_12">
 						<h1>
-							<a href="index.html">
-								<img src="images/logo.png" alt="Your Happy Family">
-							</a>
+							TITIK KEMACETAN KOTA PEKANBARU
 						</h1>
 					</div>
 				</div>
@@ -67,36 +65,24 @@
 			</header>
 <!--==============================Content=================================-->
 			<div class="content"><div class="ic">More Website Templates @ TemplateMonster.com - April 07, 2014!</div>
-				<div class="container_12">
-					<div class="grid_12">
-						<h3>Economy</h3>
-					</div>
-					<div class="clear"></div>
-					<div class="gallery">
-						<div class="grid_4"><a href="images/big1.jpg" class="gal"><img src="images/page3_img1.jpg" alt=""></a></div>
-						<div class="grid_4"><a href="images/big2.jpg" class="gal"><img src="images/page3_img2.jpg" alt=""></a></div>
-						<div class="grid_4"><a href="images/big3.jpg" class="gal"><img src="images/page3_img3.jpg" alt=""></a></div>
-					</div>
-					<div class="grid_12">
-						<h3>Standard</h3>
-					</div>
-					<div class="clear"></div>
-					<div class="gallery">
-						<div class="grid_4"><a href="images/big4.jpg" class="gal"><img src="images/page3_img4.jpg" alt=""></a></div>
-						<div class="grid_4"><a href="images/big5.jpg" class="gal"><img src="images/page3_img5.jpg" alt=""></a></div>
-						<div class="grid_4"><a href="images/big6.jpg" class="gal"><img src="images/page3_img6.jpg" alt=""></a></div>
-					</div>
-					<div class="grid_12">
-						<h3>Lux</h3>
-					</div>
-					<div class="clear"></div>
-					<div class="gallery">
-						<div class="grid_4"><a href="images/big7.jpg" class="gal"><img src="images/page3_img7.jpg" alt=""></a></div>
-						<div class="grid_4"><a href="images/big8.jpg" class="gal"><img src="images/page3_img8.jpg" alt=""></a></div>
-						<div class="grid_4"><a href="images/big9.jpg" class="gal"><img src="images/page3_img9.jpg" alt=""></a></div>
-					</div>
-					<div class="clear"></div>
+				<div id="map" class="map"></div>
+				<div id="layer-control">
+					<label><input type="checkbox" id="toggle-pku" checked /> Tampilkan Poligon Pekanbaru</label>
+					<br />
+					<label><input type="checkbox" id="toggle-macet" checked /> Tampilkan Titik Macet</label>
 				</div>
+				
+				<!-- Start Fitur Pop Up -->
+				<div id="popup" class="ol-popup">
+					<a href="#" id="popup-closer" class="ol-popup-closer">X</a>
+					<div id="popup-content">
+
+					</div>
+				</div>
+
+				<!-- Bootstrap JS -->
+				<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+				<script type="module" src="{{ asset('Project_SIG_Kemacetan/main.js') }}"></script>
 			</div>
 		</div>
 <!--==============================footer=================================-->
